@@ -9,7 +9,7 @@ def gamma_adjust(img, gamma=1.0):
     for i in range(256):
         table.append(((i/255.0)**gamma)*255)
     table = np.array(table).astype('uint8')
-    img_gamma = cv2.LUT(img, table)
+    img_gamma = cv2.LUT(img, table)   #旧图片映射到table
     return img_gamma
 
 #change color
