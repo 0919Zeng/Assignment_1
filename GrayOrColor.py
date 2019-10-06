@@ -15,6 +15,11 @@ cv2.destroyAllWindows()
 
 #opencv顺序BGR，matplotlib顺序RGB
 B, G, R = cv2.split(img)
+#改变单通道的值
+const = 55
+R[R > 200] = 255
+R[R <= 200] = R[R <= 200] + 25
+
 img_new = cv2.merge((R, G, B))
 plt.imshow(img_new)
 plt.show()
