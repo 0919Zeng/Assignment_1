@@ -1,16 +1,16 @@
 import cv2
 import matplotlib.pyplot as plt
 
-#color image
+#color image 1
 img = cv2.imread('lenna.png', 1)
 cv2.imshow('lenna', img)
-key = cv2.waitKey(0)
+cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-#gray image
+#gray image 0
 img_gray = cv2.imread('lenna.png', 0)
 cv2.imshow('lenna', img_gray)
-key = cv2.waitKey(0)
+cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 #opencv顺序BGR，matplotlib顺序RGB
